@@ -1,0 +1,21 @@
+body, html {
+    height: 100%;
+}
+
+span{
+	cursor: pointer;
+}
+
+span:hover{
+	background: #E4DEDE;
+	padding: 4px;
+	position: absolute;
+}
+
+.panel-body img{
+	margin-left: 10%;
+}
+
+.panel-body img:hover{
+	cursor: pointer;
+}
