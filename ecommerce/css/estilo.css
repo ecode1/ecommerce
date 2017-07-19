@@ -14,8 +14,28 @@ span:hover{
 
 .panel-body img{
 	margin-left: 10%;
+	width: 80%;
 }
 
 .panel-body img:hover{
 	cursor: pointer;
+}
+
+.centrado{
+	margin-left:50%;
+}
+
+.separar{
+	margin: 10px 0px;
+
+}
+
+.fondoNegro{
+	background-color:#222;
+	border-color: #080808;
+}
+
+.inputNegro{
+	background: #322F2F;
+    color: white;
 }
