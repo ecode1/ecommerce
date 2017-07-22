@@ -1,4 +1,6 @@
-		<footer>(C) GamesOdyssey</footer>
+				<footer id="footer">
+					(C) GamesOdyssey
+				</footer>
 
 		</div>	
 

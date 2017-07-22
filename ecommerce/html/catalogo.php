@@ -150,8 +150,7 @@
 				</ul>
 			</div>
 		</div>	
-		
-</div>	
+
 
 
 <div id="myModal" class="modal fade" role="dialog">
@@ -175,5 +174,5 @@
     </div>
 
   </div>
-
+</div>
 <?php include('../layout_footer.php'); ?>
