@@ -45,5 +45,4 @@
 	  </a>
 	</div>
 
-	lalala
 <?php include('../layout_footer.php'); ?>
