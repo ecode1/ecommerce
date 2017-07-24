@@ -13,7 +13,7 @@
 <body>
 
 <div class="container">
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse separar">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <a class="navbar-brand active" href="index.php">GamesOdyssey</a>
