@@ -6,7 +6,7 @@ span{
 	cursor: pointer;
 }
 
-span:hover{
+span.glyphicon-shopping-cart:hover{
 	background: #E4DEDE;
 	padding: 4px;
 	position: absolute;

@@ -17,7 +17,7 @@
 	      </div>
 	    </div>
 
-	    <div class="item">s
+	    <div class="item">
 	      <img src="../img/carousel-img2.jpeg" alt="Chicago">
 	      <div class="carousel-caption">
 	        <h3>Chicago</h3>

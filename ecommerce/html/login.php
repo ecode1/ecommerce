@@ -1,8 +1,14 @@
 
-<?php include('../layout_menu.php'); ?>
+<?php 
+include('../layout_menu.php'); 
+
+?>
 
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
+				<div class="mensaje">
+					<?php if(isset($message)){ echo $message; } ?>
+				</div>
 				<div class="panel panel-login">
 					<div class="panel-heading">
 						<div class="row">
@@ -16,7 +22,7 @@
 						<div class="row">
 							<div class="col-lg-12">
 								
-								<form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" >
+								<form id="login-form" action="../php/loginAction.php" method="post" role="form" >
 									<div class="form-group">
 										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
 									</div>
