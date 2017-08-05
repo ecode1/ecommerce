@@ -17,20 +17,16 @@ if ($result->num_rows > 0) {
         	
 			$message='<div class="alert alert-success">Thank You! I will be in touch</div>';
 			
-        	header('location:../html/catalogo.php');
+        	header("location:../html/catalogo.php?message='$message'");
         }
         	
     }
 
 }else{
-	$message='<div class="alert alert-error">No se encontro usuario en nuestros registros</div>';
-    header('location:../html/login.php');
+	$message='<div class="alert alert-warning ">No se encontro usuario en nuestros registros</div>';
+    header("location:../html/login.php?message='$message'");
         
 }
-
-$message='<div class="alert alert-error">No se encontro usuario en nuestros registros</div>';
-    header('location:../html/login.php');
-
 
 $con->close();
 

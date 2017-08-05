@@ -13,8 +13,6 @@
 	    echo "Error: " . mysqli_connect_error();
 		exit();
 	}
-	echo 'Connected to MySQL';
-
-
+	
 
 ?>

@@ -7,7 +7,11 @@ include('../layout_menu.php');
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="mensaje">
-					<?php if(isset($message)){ echo $message; } ?>
+					<?php 
+						if (isset($_GET['message'])) {
+							echo $_GET['message'];
+							}
+					?>
 				</div>
 				<div class="panel panel-login">
 					<div class="panel-heading">

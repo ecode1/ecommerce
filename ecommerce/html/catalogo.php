@@ -1,5 +1,9 @@
 
- <?php include('../layout_menu.php'); ?>
+ <?php 
+ include('../layout_menu.php'); 
+ include('../php/juegosAction.php'); 
+ ?>
+
 
 		<div class="row">
 			<div class="col-md-2">
@@ -84,59 +88,29 @@
 						</form>
 					</div>
 				</div>			
-				<div class="row">							
-					<div class="col-md-4">
+				<div class="row">	
+
+				<?php  if ( isset($_SESSION['juegos'])){ 
+					while($row = $_SESSION['juegos']->fetch_assoc()) {
+       			?>						
+					<div class="col-md-4 panelJuego">
 						<div class="panel panel-default">
-						  <div class="panel-heading">The Last of Us</div>
-						  <div class="panel-body"><img data-toggle="modal" data-target="#myModal" src="../img/juegos/lastofus.jpg" alt="The Last Of Us" ></div>
+						  <div class="panel-heading"><?php echo $row['nombreJuego'] ?></div>
+						  <div class="panel-body"><img data-toggle="modal" data-target="#myModal" src="<?php echo $row['url'] ?>" alt="The Last Of Us" ></div>
 						  <div class="panel-footer">
 							<div class="row">
 								<div class="col-xs-5">Cantidad : 1</div>
-								<div class="col-xs-5">$ 20.000</div>
+								<div class="col-xs-5"><?php echo $row['precio'] ?></div>
 								<div class="col-xs-2"><span class="glyphicon glyphicon-shopping-cart"></span></div>
 							</div>
 						  </div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="panel panel-default">
-						  <div class="panel-heading">The Last of Us</div>
-						  <div class="panel-body"><img data-toggle="modal" data-target="#myModal" src="../img/juegos/lastofus.jpg" alt="The Last Of Us" ></div>
-						  <div class="panel-footer">
-							<div class="row">
-								<div class="col-xs-5">Cantidad : 1</div>
-								<div class="col-xs-5">$ 20.000</div>
-								<div class="col-xs-2"><span class="glyphicon glyphicon-shopping-cart"></span></div>
-							</div>
-						  </div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="panel panel-default">
-						  <div class="panel-heading">The Last of Us</div>
-						  <div class="panel-body"><img data-toggle="modal" data-target="#myModal" src="../img/juegos/lastofus.jpg" alt="The Last Of Us" ></div>
-						  <div class="panel-footer">
-							<div class="row">
-								<div class="col-xs-5">Cantidad : 1</div>
-								<div class="col-xs-5">$ 20.000</div>
-								<div class="col-xs-2"><span class="glyphicon glyphicon-shopping-cart"></span></div>
-							</div>
-						  </div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="panel panel-default">
-						  <div class="panel-heading">The Last of Us</div>
-						  <div class="panel-body"><img data-toggle="modal" data-target="#myModal" src="../img/juegos/lastofus.jpg" alt="The Last Of Us" ></div>
-						  <div class="panel-footer">
-							<div class="row">
-								<div class="col-xs-5">Cantidad : 1</div>
-								<div class="col-xs-5">$ 20.000</div>
-								<div class="col-xs-2"><span class="glyphicon glyphicon-shopping-cart"></span></div>
-							</div>
-						  </div>
-						</div>
-					</div>
+				<?php 
+					}
+				}
+				?>
+					
 				</div>
 
 				<ul class="pagination centrado">
