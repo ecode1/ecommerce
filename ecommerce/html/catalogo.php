@@ -87,21 +87,65 @@
 						  </div>
 						</form>
 					</div>
+					<div class="col-md-6" id="carritoCompra">
+						
+							<span class="glyphicon glyphicon-shopping-cart pull-right"></span>
+							<div id="contenidoCarrito">
+								<table class="table table-hover">
+								    <thead>
+								      <tr>
+								        <th>nombreJuego</th>
+										<th>cantidad</th>
+										<th>subtotal</th>
+										<th></th>
+								      </tr>
+								    </thead>						    
+									<tbody>
+										<?php  if ( isset($_SESSION['carrito'])){ 
+										foreach ($_SESSION['carrito'] as $key => $value) {
+										?>
+										<tr>
+											<td><?php echo $value['nombreJuego'] ?></td>
+											<td><?php echo $value['cantidad'] ?></td>
+											<td>$ <?php echo $value['precio'] ?></td>
+											<td><button type="button" class="close" aria-label="Close">
+											  <span aria-hidden="true">&times;</span>
+											</button>
+											</td>
+										</tr>				
+										<?php 
+											}
+										}
+										?>		
+									</tbody>
+								</table>
+								<button type="button" class="btn btn-primary">
+									Pagar
+								</button>
+							</div>
+
+					</div>
 				</div>			
 				<div class="row">	
 
 				<?php  if ( isset($_SESSION['juegos'])){ 
-					while($row = $_SESSION['juegos']->fetch_assoc()) {
+					foreach ($_SESSION['juegos'] as $key => $value) {
+						
        			?>						
-					<div class="col-md-4 panelJuego">
+					<div class="col-sm-4 panelJuego" id="divJuego<?php echo $value['idJuego'];  ?>">
 						<div class="panel panel-default">
-						  <div class="panel-heading"><?php echo $row['nombreJuego'] ?></div>
-						  <div class="panel-body"><img data-toggle="modal" data-target="#myModal" src="<?php echo $row['url'] ?>" alt="The Last Of Us" ></div>
+						  <div class="panel-heading"><?php echo $value['nombreJuego'] ?></div>
+						  <div class="panel-body">
+						  	<img data-toggle="modal" data-target="#myModal" src="<?php echo $value['url'] ?>" alt="The Last Of Us" width="300" height="300"></img>
+						  </div>
 						  <div class="panel-footer">
 							<div class="row">
-								<div class="col-xs-5">Cantidad : 1</div>
-								<div class="col-xs-5"><?php echo $row['precio'] ?></div>
-								<div class="col-xs-2"><span class="glyphicon glyphicon-shopping-cart"></span></div>
+								<div class="col-xs-5">Cantidad : <input type="number" class="form-control  cantidad"></div>
+								<div class="col-xs-5">Precio: </br><?php echo $value['precio'] ?></div>
+								<div class="col-xs-2"></br>
+									<span onclick="agregarACarrito(<?php echo $value['idJuego'] ?>);" class="glyphicon glyphicon-shopping-cart"></span>
+								
+								</div>
 							</div>
 						  </div>
 						</div>

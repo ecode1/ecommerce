@@ -6,10 +6,36 @@ span{
 	cursor: pointer;
 }
 
-span.glyphicon-shopping-cart:hover{
-	background: #E4DEDE;
-	padding: 4px;
+
+#carritoCompra span.glyphicon-shopping-cart{
+	font-size: 35px;
+}
+
+#carritoCompra span.glyphicon-shopping-cart:hover{
+	font-size: 40px;
+}
+
+#contenidoCarrito{
+	background: white;
+	padding: 10px;
+	display: none;
 	position: absolute;
+	top:40px;
+	right:0;
+	z-index: 90;
+	border-radius: 5px;
+	border: 1px black solid;
+
+}
+
+#contenidoCarrito button span {
+	color:red !important;
+}
+
+
+
+.panelJuego span.glyphicon-shopping-cart:hover{
+	font-size: 20px;
 }
 
 

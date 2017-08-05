@@ -1,5 +1,6 @@
 <?php
 include 'conexion.php';
+include 'Usuario.php';
 
 
 $usuario = $_POST['username'];
@@ -12,8 +13,11 @@ $message = '';
 if ($result->num_rows > 0) {
 
     while($row = $result->fetch_assoc()) {
+        $s = serialize($row);
+        $u = new Usuario();
+        $u = unserialize($s);
        
-        if($usuario == $row['nombreUsuario'] && $clave == $row['contrasena']){
+        if($usuario == $u["nombreUsuario"] && $clave == $u["contrasena"]){
         	
 			$message='<div class="alert alert-success">Thank You! I will be in touch</div>';
 			
