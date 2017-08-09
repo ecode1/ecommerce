@@ -11,6 +11,7 @@ class Juego{
 	public $idCategoria;
 	public $idConsola;
 	public $cantidad;
+	public $subtotal;
 
 	function __construct(){
 

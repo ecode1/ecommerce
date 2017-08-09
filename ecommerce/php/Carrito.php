@@ -20,7 +20,7 @@ public function Agregar($pro){
 	
 	$existe=false;
 	foreach ($this->milista as $key => $value) {
-		if($pro['id']==$value['id']){
+		if($pro['idJuego']==$value['idJuego']){
 
 			$existe=true;
 		}
@@ -31,7 +31,7 @@ public function Agregar($pro){
 	}
 	else{
 
-		$this->IncrementarCantidad($pro['idJuego'], 1);
+		$this->IncrementarCantidad($pro['idJuego'], $pro['cantidad']);
 	}
 
 	$this->MontoTotal();
@@ -69,18 +69,17 @@ public function Contar(){
 public function IncrementarCantidad($id,$cantidad){
 
 	$producto;
-
+	
 	foreach ($this->milista as $key => $value) {
-		if($value['id'==$id]){
+		if($value['idJuego']==$id){
 
 			$producto=$value;
 		}
 	}
-	$producto['cantidad']=1;
+	
 	$producto['cantidad']= $producto['cantidad']+$cantidad;
-
 	foreach ($this->milista as $key => $value) {
-		if($value['id'==$id]){
+		if($value['idJuego']==$id){
 
 			$value=$producto;
 		}

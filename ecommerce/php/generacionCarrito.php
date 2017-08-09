@@ -9,23 +9,28 @@ session_start();
 
 	$j = new Juego();
 	$c = new Carrito();
-
-
-	if($j->validaJuego($idJuego, $listaJuegos)){
-		foreach ($listaJuegos as $key => $value) {
-			if($value['idJuego'] == $idJuego){
-				$s = serialize($value);
-		        $juego = new Juego();
-		        $juego = unserialize($s);
-		        $juego['cantidad']=$cantidad;
-
-		        $c->Agregar($juego);
-
-		        $_SESSION['carrito']=$c->milista;
-
-			}
-		}
-		
+	if(isset($_SESSION['carrito'])){
+		$c->milista = $_SESSION['carrito'];
 	}
+	
+	if($cantidad != null){
+		if($j->validaJuego($idJuego, $listaJuegos)){
+			foreach ($listaJuegos as $key => $value) {
+				if($value['idJuego'] == $idJuego){
+					
+			        $juego = new Juego();
+			        $juego = $value;
+			        $juego['cantidad']=$cantidad;
+			        $c->Agregar($juego);
+			        $_SESSION['carrito'] = $c->milista;
+			       echo json_encode($_SESSION['carrito']);
+
+				}
+			}
+		
+		}
+	}
+	
+
 
 ?>
