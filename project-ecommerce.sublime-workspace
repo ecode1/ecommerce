@@ -1,0 +1,365 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"b",
+				"bkgr_menu"
+			],
+			[
+				"bkgr_",
+				"bkgr_body"
+			],
+			[
+				"bk",
+				"bkgr_menu"
+			],
+			[
+				"bkgr",
+				"bkgr_body"
+			],
+			[
+				"se",
+				"sections"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"mw",
+				"min-width"
+			],
+			[
+				"giro_",
+				"giro_medio"
+			],
+			[
+				"trans",
+				"translateZ()"
+			],
+			[
+				"perspe",
+				"perspective-origin"
+			],
+			[
+				"bra",
+				"border-radius"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"transla",
+				"translateX()"
+			],
+			[
+				"transitio",
+				"transition-duration"
+			],
+			[
+				"bg",
+				"bg\tbackground: #${1:000};"
+			],
+			[
+				"mid",
+				"middle"
+			],
+			[
+				"ib",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "Package Control: inst",
+		"selected_items":
+		[
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/xampp/htdocs/ecommerce"
+	],
+	"file_history":
+	[
+		"/C/xampp/htdocs/ecommerce/ecommerce/html/ecommerce.sublime-project",
+		"/C/xampp/htdocs/ecommerce/ecommerce/css/estilo.css",
+		"/C/xampp/htdocs/ecommerce/ecommerce/index.php",
+		"/C/xampp/htdocs/ecommerce/ecommerce/index.html",
+		"/C/Users/asepulveda/Documents/GitHub/ecommerce/ecommerce/css/estilo.css",
+		"/C/Users/asepulveda/Documents/GitHub/ecommerce/ecommerce/index.html",
+		"/C/Users/asepulveda/Documents/GitHub/ecommerce/ecommerce/html/catalogo.html",
+		"/C/Users/asepulveda/Documents/ecommerce/css/estilo.css",
+		"/C/Users/asepulveda/Documents/ecommerce/js/funciones.js",
+		"/C/Users/asepulveda/Documents/ecommerce/html/catalogo.html",
+		"/C/Users/asepulveda/Documents/ecommerce/index.html",
+		"/C/Users/asepulveda/Documents/GitHub/pagina-web/prueba github.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto JS/index.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto JS/css/style.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto JS/js/autoplay.js",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto JS/js/time_manager.js",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto Practico/index.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto Practico/css/design.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto Practico/css/particles.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto Practico/js/particles.js",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto Practico/contact.php",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto Practico/css/fonts/aller.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Proyecto Practico/css/aldo.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/6- reloj/reloj.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/6- reloj/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/5- cubo_rubyk/cubo_rubyk.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/5- cubo_rubyk/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/4- bolaMundo/bolaMundo.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/4- bolaMundo/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/3- cubo/cubo.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/3- cubo/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/2- translateZ/3d_translateZ.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/2- translateZ/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/1- perspective/3d_perspective.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/efectos 3D/1- perspective/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/11- sombra_movil/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/11- sombra_movil/keyframe_sombra_movil.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/10- velozin/keyframe_velozin.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/10- velozin/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/9- iorotativo/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/9- iorotativo/keyframe_iorotativo.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/8- caida/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/8- caida/keyframe_caida.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/7- vaivén/keyframe_vaiven.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/7- vaivén/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/6- balanceo/keyframe_balanceo.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/6- balanceo/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/5- cartel/keyframe_cartel.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/5- cartel/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/4- vibracion/keyframe_vibracion.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/4- vibracion/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/3- chicle/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/3- chicle/keyframe_chicle.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/2- click/keyframe_click.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/2- click/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/1- flash/keyframe_flash.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/1- flash/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/1/efecto_keyframe.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/Keyframes/1/efecto_keyframe.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/05- sombra_radial/sombra_radial.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/05- sombra_radial/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/04- sombra_fija/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/04- sombra_fija/sombra_fija.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/03- esquina_pagina/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/03- esquina_pagina/esquina_pagina.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/02- triangulo_fijo/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/Animaciones/02- triangulo_fijo/triangulo_fijo.html",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/efecto1/efecto.css",
+		"/C/Users/asepulveda/Desktop/Curso Web/Web/efecto1/triangulo_lateral.html"
+	],
+	"find":
+	{
+		"height": 28.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<li class=\"dropdown\">\n\t        <a class=\"dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\">Page 1\n\t        <span class=\"caret\"></span></a>\n\t        <ul class=\"dropdown-menu\">\n\t          <li><a href=\"#\">Page 1-1</a></li>\n\t          <li><a href=\"#\">Page 1-2</a></li>\n\t          <li><a href=\"#\">Page 1-3</a></li>\n\t        </ul>\n\t      </li>",
+			"\t      \n",
+			"slider",
+			"white",
+			"buttonp",
+			"green",
+			";\n",
+			"%\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "project-ecommerce.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 191.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

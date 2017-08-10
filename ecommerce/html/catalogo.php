@@ -107,7 +107,7 @@
 										<tr>
 											<td><?php echo $value['nombreJuego'] ?></td>
 											<td><?php echo $value['cantidad'] ?></td>
-											<td>$ <?php echo $value['subtotal'] ?></td>
+											<td>$ <?php echo $value['cantidad']* $value['precio'] ?></td>
 											<td><button type="button" class="close" aria-label="Close">
 											  <span aria-hidden="true">&times;</span>
 											</button>
