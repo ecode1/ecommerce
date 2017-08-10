@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <head>
   <title>GamesOdyssey</title>
   <meta charset="utf-8">
@@ -28,13 +29,20 @@
 			
 			<div id="navbar-1" class="navbar-collapse collapse mainnav">
 				<ul class="nav navbar-nav">
-			      <li <?php if($_GET['p'] == 'ca'): ?> class="active"<?php endif ?> ><a href="catalogo.php?p=ca">Catalogo</a></li>
-			      <li <?php if($_GET['p'] == 'no'): ?> class="active"<?php endif ?> ><a href="#">Nosotros</a></li>
-			      <li <?php if($_GET['p'] == 'co'): ?> class="active"<?php endif ?> ><a href="#">Contacto</a></li>	      
+			      <li <?php if(isset($_GET['p']) &&  $_GET['p'] == 'ca'): ?> class="active"<?php endif ?> ><a href="catalogo.php?p=ca">Catalogo</a></li>
+			      <li <?php if(isset($_GET['p']) &&  $_GET['p'] == 'no'): ?> class="active"<?php endif ?> ><a href="#">Nosotros</a></li>
+			      <li <?php if(isset($_GET['p']) &&  $_GET['p'] == 'co'): ?> class="active"<?php endif ?> ><a href="#">Contacto</a></li>	      
 			    </ul>
 			    <ul class="nav navbar-nav navbar-right">
-			      <li <?php if($_GET['p'] == 'su'): ?> class="active"<?php endif ?>><a href="register.php?p=su"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-			      <li <?php if($_GET['p'] == 'lo'): ?> class="active"<?php endif ?>><a href="login.php?p=lo"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			    	<?php if (isset($_SESSION['login']) && $_SESSION['login'] == true){  ?>
+						<li><a href="#" ><span class="glyphicon glyphicon-user" style="color:#7f40b9"></span> &nbsp; <?php echo $_SESSION['usuario']['nombreUsuario'] ?></a></li>
+						<li><a href="#"><button id="cerrarSesion" onclick="cerrarSesion()" type="button" class="close" aria-label="Close">
+											  <span aria-hidden="true">&times;</span>
+											</button></a></li>
+			    	<?php } else { ?>
+			      <li <?php if(isset($_GET['p']) &&  $_GET['p'] == 'su'): ?> class="active"<?php endif ?>><a href="register.php?p=su"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			      <li <?php if(isset($_GET['p']) &&  $_GET['p'] == 'lo'): ?> class="active"<?php endif ?>><a href="login.php?p=lo"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			      <?php } ?>
 			    </ul>
 			</div>
 			<!--/.nav-collapse -->

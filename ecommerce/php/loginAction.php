@@ -2,6 +2,7 @@
 include 'conexion.php';
 include 'Usuario.php';
 
+session_start();
 
 $usuario = $_POST['username'];
 $clave = $_POST['password'];
@@ -19,9 +20,10 @@ if ($result->num_rows > 0) {
        
         if($usuario == $u["nombreUsuario"] && $clave == $u["contrasena"]){
         	
-			$message='<div class="alert alert-success">Thank You! I will be in touch</div>';
-			
-        	header("location:../html/catalogo.php?message='$message'");
+			$_SESSION['login']=true;
+            $_SESSION['usuario']= $u;
+        	header("location:../html/catalogo.php");
+
         }
         	
     }

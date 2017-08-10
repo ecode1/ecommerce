@@ -48,3 +48,16 @@ function realizaProceso(idJuego, cantidad){
                 }
         });
 }
+
+function cerrarSesion(){
+    $.ajax({
+        url: '../php/salir.php',
+        type: 'post',
+        success: function(response){
+            if(response){
+                console.log("slir");
+                window.location.href="../html/login.php";
+            }
+        }
+    });
+}

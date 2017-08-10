@@ -1,9 +1,12 @@
 
  <?php 
  include('../layout_menu.php'); 
- include('../php/juegosAction.php'); 
+ include('../php/juegosAction.php');
+ if(!$_SESSION['login']){
+   header("location:login.php");
+   die;
+ } 
  ?>
-
 
 		<div class="row">
 			<div class="col-md-2">
