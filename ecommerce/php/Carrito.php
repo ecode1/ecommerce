@@ -76,12 +76,11 @@ public function IncrementarCantidad($id,$cantidad){
 			$producto=$value;
 		}
 	}
-	
 	$producto['cantidad']= $producto['cantidad']+$cantidad;
 	foreach ($this->milista as $key => $value) {
 		if($value['idJuego']==$id){
 
-			$value=$producto;
+			$this->milista[$key]=$producto;
 		}
 		
 	}

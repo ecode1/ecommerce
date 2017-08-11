@@ -21,6 +21,7 @@ session_start();
 			        $juego = new Juego();
 			        $juego = $value;
 			        $juego['cantidad']=$cantidad;
+
 			        $c->Agregar($juego);
 			        $_SESSION['carrito'] = $c->milista;
 			       echo json_encode($_SESSION['carrito']);
