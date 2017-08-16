@@ -143,7 +143,7 @@
 						  </div>
 						  <div class="panel-footer">
 							<div class="row">
-								<div class="col-xs-5">Cantidad : <input type="number" class="form-control  cantidad" min="0" max="10" oninput="validity.valid||(value='');"></div>
+								<div class="col-xs-5">Cantidad : <input type="number" class="form-control  cantidad" min="0" max="60" oninput="validity.valid||(value='');"></div>
 								<div class="col-xs-5">Precio: </br><?php echo $value['precio'] ?></div>
 								<div class="col-xs-2"></br>
 									<span onclick="agregarACarrito(<?php echo $value['idJuego'] ?>);" class="glyphicon glyphicon-shopping-cart"></span>

@@ -32,6 +32,7 @@ function realizaProceso(idJuego, cantidad){
                 //         $("#resultado").html("Procesando, espere por favor...");
                 // },
                 success:  function (response) {
+                    //console.log(response);
                     if(response){
                         $("#contenidoCarrito table tbody").empty();
 
