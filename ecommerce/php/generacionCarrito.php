@@ -24,20 +24,31 @@ session_start();
 					        $juego = $value;
 					        $juego['cantidad']=$cantidad;
 					        	if($j->validastock($listaJuegos, $cantidad)){
-								         //var_dump($value['stock']);
-								         // var_dump($cantidad);
-									     $c->Agregar($juego);
-									    $j->updatestock($cantidad, $idJuego);
+					        		$pre = $juego['precio'];
+					        		if($j->validaprecio($listaJuegos, $pre)){
+					        			$descripcion = $juego['descripcion'];
+					        			if($j->validadescripcion($listaJuegos, $descripcion)){
+
+										$c->Agregar($juego);
+									    //$j->updatestock($cantidad, $idJuego);
 									     //var_dump($j->updatestock($cantidad, $idJuego));
 									     $_SESSION['carrito'] = $c->milista;
 									    echo json_encode($_SESSION['carrito']);
+
+					        			}
+
+
+									     
+					        			}
+								        
+									}
 			        			
 				      	}
 				}
 			}
 		
 		}
-	}
+	
 	
 
 

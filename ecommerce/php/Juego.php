@@ -43,6 +43,38 @@ class Juego{
 
 	}
 
+	public function validaprecio($listaJuegos, $pre){
+
+
+			foreach ($listaJuegos as $key => $value) {
+				$intprecio = intval($pre);
+				$intpreciolista = intval($value['precio']);
+				if($intprecio == $intpreciolista){
+					return true;
+				}
+			}
+			return false;
+
+
+	}
+
+	public function validadescripcion($listaJuegos, $descripcion){
+		foreach ($listaJuegos as $key => $value) {
+
+			if ($value['descripcion'] == $descripcion){
+
+					return true;
+
+
+			}
+		}
+		return false;
+
+
+
+
+	}
+
 
 
 	public function updatestock($cantidad, $idJuego){
