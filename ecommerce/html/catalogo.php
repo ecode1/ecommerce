@@ -122,7 +122,7 @@
 										?>		
 									</tbody>
 								</table>
-								<button type="button" class="btn btn-primary">
+								<button id="btnPagar" type="button" class="btn btn-primary" onclick="pagarCarrito()">
 									Pagar
 								</button>
 							</div>

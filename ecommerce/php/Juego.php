@@ -1,17 +1,17 @@
 <?php 
 class Juego{
 
-	public $idJuego;
-	public $nombreJuego;
-	public $descripcion;
-	public $anho;
-	public $precio;
-	public $stock;
-	public $url;
-	public $idCategoria;
-	public $idConsola;
-	public $cantidad;
-	public $subtotal;
+	private $idJuego;
+	private $nombreJuego;
+	private $descripcion;
+	private $anho;
+	private $precio;
+	private $stock;
+	private $url;
+	private $idCategoria;
+	private $idConsola;
+	private $cantidad;
+	private $subtotal;
 
 	function __construct(){
 

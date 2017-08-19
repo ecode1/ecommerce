@@ -39,6 +39,7 @@ function realizaProceso(idJuego, cantidad){
                        $.each(JSON.parse(response), function(index, value){
                             var elemento = '<tr><td>'+value.nombreJuego+'</td><td>'+value.cantidad+'</td>'+
                                                 '<td>'+(value.cantidad * value.precio)+'</td>'+
+                                                //'<td>'+value.subtotal+'</td>'+
                                                 '<td><button type="button" class="close" aria-label="Close">'+
                                                '<span aria-hidden="true">&times;</span></button></td></tr>   ';
                             $("#contenidoCarrito table tbody").append(elemento);
@@ -61,4 +62,8 @@ function cerrarSesion(){
             }
         }
     });
+}
+
+function pagarCarrito(){
+    window.location.href = "../php/server.php";
 }

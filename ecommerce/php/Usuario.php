@@ -2,11 +2,11 @@
 
 class Usuario{
 
-	public $idUsuario;
-	public $rut;
-	public $nombreUsuario;
-	public $email;
-	public $contrasena;
+	private $idUsuario;
+	private $rut;
+	private $nombreUsuario;
+	private $email;
+	private $contrasena;
 
 	function __construct(){
 

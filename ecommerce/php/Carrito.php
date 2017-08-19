@@ -3,8 +3,8 @@
 class Carrito{
 
 public $milista;
-public $total;
-public $cantidadtotal;
+private $total;
+private $cantidadtotal;
 
 function __construct(){
 
@@ -39,7 +39,7 @@ public function Agregar($pro){
 }
 
 
-public function Eliminar($id){
+private function Eliminar($id){
 
 	unset($this->milista[$id]);
 
@@ -51,22 +51,33 @@ public function Limpiar(){
 
 }
 
-public function MontoTotal(){
+private function MontoTotal(){
 
 	$this->total=0;
 	foreach ($this->milista as $key => $value) {
-		$this->total+= $value['precio'];
+		//$this->total+= $value['precio'];
+
+		$pre = intval($value['precio']);
+		$canto = intval($value['cantidad']);
+
+		$this->total = $pre * $canto;
+		//$this->total = strval($this->total);
+		$total = strval($this->total);
+		//var_dump($total);
+		$value['subtotal'] = $total;
+		//var_dump($this->milista['subtotal']);
+		//strval($this->total) = ($this->milista);
 	}
 	$this->Contar();
 }
 
-public function Contar(){
+private function Contar(){
 
 	$this->cantidadtotal=count($this->milista);
 
 }
 
-public function IncrementarCantidad($id,$cantidad){
+private function IncrementarCantidad($id,$cantidad){
 
 	$producto;
 	

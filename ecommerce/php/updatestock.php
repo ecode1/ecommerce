@@ -4,7 +4,7 @@ include 'Juego.php';
 session_start();
 
 
-public function updatestock($cantidad, $idJuego){
+private function updatestock($cantidad, $idJuego){
 		
 		$listaJuegos = $_SESSION['juegos'];
 

@@ -33,7 +33,9 @@ session_start();
 									    //$j->updatestock($cantidad, $idJuego);
 									     //var_dump($j->updatestock($cantidad, $idJuego));
 									     $_SESSION['carrito'] = $c->milista;
+									     //$_SESSION['subtotal'] = $c->total;
 									    echo json_encode($_SESSION['carrito']);
+									    //echo json_encode($_SESSION['subtotal']);
 
 					        			}
 
