@@ -16,24 +16,11 @@ session_start();
 	
 
 	
-		if($j->validaJuego($idJuego, $listaJuegos)){		
-			foreach ($listaJuegos as $key => $value) {
-				if($value['idJuego'] == $idJuego){					
-					        $juego = new Juego();
-					        $juego = $value;
-					        $pre = $juego['precio'];
-					        if($j->validaprecio($listaJuegos, $pre)){
-					        	$descripcion = $juego['descripcion'];
-					        	if($j->validadescripcion($listaJuegos, $descripcion)){
-									$c->Eliminar($idJuego);
-									  $_SESSION['carrito'] = $c->milista;
-									   echo json_encode($_SESSION['carrito']);						        
-										}
-			        			
-				      				}
-							}
-					}
-		
-			}
+	if($j->validaJuego($idJuego, $listaJuegos)){	
+		$c->Eliminar($idJuego);	
+		$_SESSION['carrito'] = $c->milista;
+		echo json_encode($_SESSION['carrito']);
 	
+	}
+
 ?>

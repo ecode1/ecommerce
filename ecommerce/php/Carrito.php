@@ -40,8 +40,12 @@ public function Agregar($pro){
 
 
 public function Eliminar($idJuego){
+	foreach ($this->milista as $key => $value) {
 
-	unset($this->milista[$idJuego]);
+		if($value['idJuego'] == $idJuego){			
+			unset($this->milista[$key]);
+		}
+	}
 
 }
 

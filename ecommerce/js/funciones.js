@@ -37,7 +37,7 @@ function realizaProceso(idJuego, cantidad){
                        $.each(JSON.parse(response), function(index, value){
                             var elemento = '<tr><td>'+value.nombreJuego+'</td><td>'+value.cantidad+'</td>'+
                                                 '<td>'+(value.cantidad * value.precio)+'</td>'+
-                                                '<td><button type="button" class="close" aria-label="Close">'+
+                                                '<td><button type="button" class="close" aria-label="Close" onClick="eliminardeCarrito('+value.idJuego+')">'+
                                                '<span aria-hidden="true">&times;</span></button></td></tr>   ';
                             $("#contenidoCarrito table tbody").append(elemento);
                        });                            
@@ -66,9 +66,7 @@ function pagarCarrito(){
 }
 
 function buscarjuego(juego){
-   //window.location.href = "../php/buscarjuego.php";
     var juegonombre = juego;
-    //console.log(juegonombre);
     realizabuscar(juegonombre);
 }
 
@@ -81,13 +79,13 @@ function realizabuscar(juegonombre){
                 url:   '../php/buscarjuego.php',
                 type:  'post',
                 success:  function (response) {
-                    $("#catalogo").empty();
                     if(response){
+
                         $("#catalogo").empty();
 
-
                        $.each(JSON.parse(response), function(index, value){
-                            var elemento =     '<div class="col-sm-4 panelJuego" id="divJuego'+value.idJuego+'"'+
+
+                            var elemento =     '<div class="col-sm-4 panelJuego" id="divJuego'+value.idJuego+'">'+
                                                 '<div class="panel panel-default">'+
                                                 '<div class="panel-heading">'+value.nombreJuego+'</div>'+
                                                 '<div class="panel-body">'+
@@ -97,8 +95,7 @@ function realizabuscar(juegonombre){
                                                '<div class="row">'+
                                                '<div class="col-xs-5">Cantidad : <input type="number" class="form-control  cantidad" min="0" max="10" oninput="validity.valid||(value="");"></div>'+//ESTA LINEA DA ERROR AL TRATAR DE MANDAR AL CARRITO
                                                '<div class="col-xs-5">Precio: </br>'+value.precio+'</div>'+
-                                               '<div class="col-xs-2"></div>'+
-                                               '<span onclick="agregarACarrito('+value.idJuego+');" class="glyphicon glyphicon-shopping-cart"></span>'+
+                                               '<div class="col-xs-2"></br><span onclick="agregarACarrito('+value.idJuego+');" class="glyphicon glyphicon-shopping-cart"></span></div>'+
                                                '</div>'+
                                                '</div>'+
                                                '</div>'+
@@ -142,7 +139,7 @@ function eliminacarrito(id){
                             var elemento = '<tr><td>'+value.nombreJuego+'</td><td>'+value.cantidad+'</td>'+
                                                 '<td>'+(value.cantidad * value.precio)+'</td>'+
                                                 //'<td>'+value.subtotal+'</td>'+
-                                                '<td><button type="button" class="close" aria-label="Close">'+
+                                                '<td><button type="button" class="close" aria-label="Close" onClick="eliminardeCarrito('+value.idJuego+')">'+
                                                '<span aria-hidden="true">&times;</span></button></td></tr>   ';
                             $("#contenidoCarrito table tbody").append(elemento);
                        });                            

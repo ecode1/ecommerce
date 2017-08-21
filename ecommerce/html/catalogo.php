@@ -94,9 +94,9 @@
 					<div class="col-md-6 separar">
 						<form>
 						  <div class="input-group">
-						    <input type="text" id="juego" name="juego" class="form-control inputNegro" placeholder="Search">
+						    <input type="text" id="juegobuscar" name="juego" class="form-control inputNegro" placeholder="Search">
 						    <div class="input-group-btn">
-						      <button class="btn btn-default" type="button" onclick="buscarjuego(juego.value)">
+						      <button class="btn btn-default" type="button" onclick="buscarjuego($('#juegobuscar').val())">
 						        <i class="glyphicon glyphicon-search"></i>
 						      </button>
 						    </div>
