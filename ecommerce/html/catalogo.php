@@ -2,6 +2,8 @@
  <?php 
  include('../layout_menu.php'); 
  include('../php/juegosAction.php');
+ include('../php/categoriasAction.php');
+ include('../php/consolasAction.php');
  if(!$_SESSION['login']){
    header("location:login.php");
    die;
@@ -23,33 +25,40 @@
 							  <div class="panel panel-default">
 							    <div class="panel-heading">
 							      <h4 class="panel-title">
-							        <a data-toggle="collapse" href="#categorias">Categoria</a>
+							       <a data-toggle="collapse" href="#Categorias">Categorias</a>
 							      </h4>
 							    </div>
-							    <div id="categorias" class="panel-collapse collapse">
-							      <ul class="list-group">	        
-									  <li class="list-group-item"><a href="#">Aventura</a><span class="badge">12</span></li>
-									  <li class="list-group-item"><a href="#">Accion</a><span class="badge">5</span></li>
-									  <li class="list-group-item"><a href="#">Terror</a><span class="badge">3</span></li>
-															        
+							    <div id="Categorias" class="panel-collapse collapse">
+							    <?php  if ( isset($_SESSION['categorias'])){ 
+										foreach ($_SESSION['categorias'] as $key => $value) {
+										?>   
+							      <ul class="list-group">	
+									  <li class="list-group-item" onclick="buscarjuego(<?php echo $value['idCategoria'] ?>)"><a href="#"><?php echo $value['categoria']; ?></a><span class="badge"></span></li>
 							      </ul>
-							    </div>
+							      <?php 
+											}
+										}
+										?>	
 							  </div>
 				        </li>
 				        <li class="list-group-item">
 							  <div class="panel panel-default">
 							    <div class="panel-heading">
 							      <h4 class="panel-title">
-							        <a data-toggle="collapse" href="#consolas">Consola</a>
+							        <a data-toggle="collapse" href="#Consolas">Consola</a>
 							      </h4>
 							    </div>
-							    <div id="consolas" class="panel-collapse collapse">
-							      <ul class="list-group">	        
-									  <li class="list-group-item"><a href="#">Ps4</a><span class="badge">12</span></li>
-									  <li class="list-group-item"><a href="#">Xbox</a><span class="badge">5</span></li>
-									  <li class="list-group-item"><a href="#">Nintendo</a><span class="badge">3</span></li>
-															        
+							    <div id="Consolas" class="panel-collapse collapse">
+							    <?php  if ( isset($_SESSION['consolas'])){ 
+										foreach ($_SESSION['consolas'] as $key => $value) {
+										?>   
+							      <ul class="list-group">	
+									  <li class="list-group-item" onclick="buscarjuego(<?php echo $value['idConsola'] ?>)"><a href="#"><?php echo $value['consola']; ?></a><span class="badge"></span></li>
 							      </ul>
+							      <?php 
+											}
+										}
+										?>	
 							    </div>
 							  </div>
 				        </li>
@@ -61,12 +70,16 @@
 							      </h4>
 							    </div>
 							    <div id="anho" class="panel-collapse collapse">
+							    <?php  if ( isset($_SESSION['juegos'])){ 
+										foreach ($_SESSION['juegos'] as $key => $value) {
+										?>   
 							      <ul class="list-group">	        
-									  <li class="list-group-item"><a href="#">2017</a><span class="badge">12</span></li>
-									  <li class="list-group-item"><a href="#">2016</a><span class="badge">5</span></li>
-									  <li class="list-group-item"><a href="#">2015</a><span class="badge">3</span></li>
-															        
+									  <li class="list-group-item" onclick="buscarjuego(<?php echo $value['anho'] ?>)"><a href="#"><?php echo $value['anho']; ?></a></li>						        
 							      </ul>
+							       <?php 
+											}
+										}
+										?>	
 							    </div>
 							  </div>
 				        </li>
@@ -81,9 +94,9 @@
 					<div class="col-md-6 separar">
 						<form>
 						  <div class="input-group">
-						    <input type="text" class="form-control inputNegro" placeholder="Search">
+						    <input type="text" id="juego" name="juego" class="form-control inputNegro" placeholder="Search">
 						    <div class="input-group-btn">
-						      <button class="btn btn-default" type="submit">
+						      <button class="btn btn-default" type="button" onclick="buscarjuego(juego.value)">
 						        <i class="glyphicon glyphicon-search"></i>
 						      </button>
 						    </div>
@@ -111,7 +124,7 @@
 											<td><?php echo $value['nombreJuego'] ?></td>
 											<td><?php echo $value['cantidad'] ?></td>
 											<td>$ <?php echo $value['cantidad']* $value['precio'] ?></td>
-											<td><button type="button" class="close" aria-label="Close">
+											<td><button type="button" class="close" aria-label="Close" onclick="eliminardeCarrito(<?php echo $value['idJuego'] ?>);">
 											  <span aria-hidden="true">&times;</span>
 											</button>
 											</td>
@@ -129,7 +142,7 @@
 
 					</div>
 				</div>			
-				<div class="row">	
+				<div class="row" id="catalogo">	
 
 				<?php  if ( isset($_SESSION['juegos'])){ 
 					foreach ($_SESSION['juegos'] as $key => $value) {
@@ -143,7 +156,7 @@
 						  </div>
 						  <div class="panel-footer">
 							<div class="row">
-								<div class="col-xs-5">Cantidad : <input type="number" class="form-control  cantidad" min="0" max="60" oninput="validity.valid||(value='');"></div>
+								<div class="col-xs-5">Cantidad : <input type="number" class="form-control  cantidad" min="0" max="10" oninput="validity.valid||(value='');"></div>
 								<div class="col-xs-5">Precio: </br><?php echo $value['precio'] ?></div>
 								<div class="col-xs-2"></br>
 									<span onclick="agregarACarrito(<?php echo $value['idJuego'] ?>);" class="glyphicon glyphicon-shopping-cart"></span>

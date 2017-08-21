@@ -8,7 +8,7 @@ session_start();
 
 
 $idTipoCuenta = $_POST['idTipoCuenta'];
-print_r($idTipoCuenta);
+//print_r($idTipoCuenta);
 $monto=0;
 $descripcion="";
 

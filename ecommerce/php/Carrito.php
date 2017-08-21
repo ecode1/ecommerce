@@ -39,9 +39,9 @@ public function Agregar($pro){
 }
 
 
-private function Eliminar($id){
+public function Eliminar($idJuego){
 
-	unset($this->milista[$id]);
+	unset($this->milista[$idJuego]);
 
 }
 
