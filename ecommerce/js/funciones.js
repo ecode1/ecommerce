@@ -150,4 +150,10 @@ function eliminacarrito(id){
         });
 }
 
+function paginacion(numeroPagina){
+
+        window.location.href = "../php/paginacion.php?numeroPagina="+numeroPagina;
+        
+}
+
 

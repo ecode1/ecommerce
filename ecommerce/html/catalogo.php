@@ -144,8 +144,8 @@
 				</div>			
 				<div class="row" id="catalogo">	
 
-				<?php  if ( isset($_SESSION['juegos'])){ 
-					foreach ($_SESSION['juegos'] as $key => $value) {
+				<?php  if ( isset($_SESSION['juegosMostrar'])){ 
+					foreach ($_SESSION['juegosMostrar'] as $key => $value) {
 						
        			?>						
 					<div class="col-sm-4 panelJuego" id="divJuego<?php echo $value['idJuego'];  ?>">
@@ -172,13 +172,30 @@
 				?>
 					
 				</div>
-
+				
 				<ul class="pagination centrado">
-				  <li><a href="#">1</a></li>
-				  <li><a href="#">2</a></li>
-				  <li><a href="#">3</a></li>
-				  <li><a href="#">4</a></li>
-				  <li><a href="#">5</a></li>
+				<?php if(isset($_SESSION['paginacion'])) { 
+						for ($i=1; $i<= $_SESSION['paginacion']; $i++) {		
+				
+							if(isset($_SESSION['paginaActive'])){
+								if($_SESSION['paginaActive'] == $i){ ?>
+								
+									<li class="active"><a href="javascript:paginacion(<?php echo $i; ?>)"><?php echo $i; ?></a></li>
+						<?php
+								}else{ ?>
+
+									<li><a href="javascript:paginacion(<?php echo $i; ?>)"><?php echo $i; ?></a></li>
+							
+						<?php	}
+							}
+						?>			
+
+				 						  
+				
+				<?php 	
+						} 
+					}
+				?>
 				</ul>
 			</div>
 		</div>	
