@@ -44,5 +44,4 @@
 	    <span class="sr-only">Next</span>
 	  </a>
 	</div>
-
 <?php include('../layout_footer.php'); ?>

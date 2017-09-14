@@ -1,11 +1,8 @@
 <?php
-
 include('../lib/nusoap.php');
-
-
-
-session_start();
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 $idTipoCuenta = $_POST['idTipoCuenta'];
 //print_r($idTipoCuenta);
@@ -41,7 +38,4 @@ foreach ($resultPagar as $key => $result) {
 		header("location:../html/pagar.php");
 	}
 }
-
-
-
 ?>

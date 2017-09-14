@@ -1,13 +1,10 @@
 <?php 
-
  include('../layout_menu.php'); 
  if(!$_SESSION['login'] && !$_SESSION['cuentas'] ){
    header("location:login.php");
    die;
  } 
  ?>
-
-
  <div class="row">
 
 	 		<?php if (isset($_SESSION["estadoPago"])){ ?>
@@ -50,6 +47,4 @@
     	
   	</div> 
  </div> 
- 	
-
  <?php include('../layout_footer.php'); ?>

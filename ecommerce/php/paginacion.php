@@ -1,8 +1,9 @@
 <?php 
-
 	include 'juegosAction.php';
 
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 	$numeroPagina = $_GET['numeroPagina'];
 	$listaJuegos= $_SESSION['juegos'];
@@ -13,5 +14,4 @@
 	$_SESSION['paginaActive'] = $numeroPagina;
 
 	header("location:../html/catalogo.php");
-
 ?>

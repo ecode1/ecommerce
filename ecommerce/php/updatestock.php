@@ -1,7 +1,10 @@
 <?php 
 include 'conexion.php';
 include 'Juego.php';
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 
 private function updatestock($cantidad, $idJuego){
@@ -23,7 +26,5 @@ private function updatestock($cantidad, $idJuego){
 		}			
 }
 
-}
-
-	
+}	
 ?>

@@ -1,7 +1,10 @@
 <?php 
 include 'Carrito.php';
 include 'Juego.php';
-session_start();	
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 	$idJuego = $_POST['idJuego'];
 	$cantidad= $_POST['cantidad'];
@@ -49,9 +52,4 @@ session_start();
 				}
 			}
 		}
-	
-	
-	
-
-
 ?>

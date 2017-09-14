@@ -2,7 +2,6 @@
 include 'conexion.php';
 include 'Categoria.php';
 
-
 if(!isset($_SESSION['categorias'])){
 	$listacategorias;
 	$sql = "SELECT * FROM categoria";
@@ -29,9 +28,5 @@ if(!isset($_SESSION['categorias'])){
 	json_encode($_SESSION['categorias']);
 
 	$con->close();
-}
-
-
-
-	
+}	
 ?>

@@ -2,8 +2,9 @@
 include 'conexion.php';
 include 'Usuario.php';
 
-session_start();
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 $usuario = $_POST['username'];
 $clave = $_POST['password'];
 
@@ -29,8 +30,8 @@ if ($result->num_rows > 0) {
     }
 
 }else{
-	$message='<div class="alert alert-warning ">No se encontro usuario en nuestros registros</div>';
-    header("location:../html/login.php?message='$message'");
+	$message='<div class="alert alert-warning">No se encontro usuario en nuestros registros</div>';
+    header("location:../html/login.php?message=$message");
         
 }
 

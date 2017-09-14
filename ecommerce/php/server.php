@@ -1,7 +1,9 @@
 <?php
 include('../lib/nusoap.php');
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 //Lee Xml
 $client = new nusoap_client('http://www.devkairos.com/BancoFalso2017/Usuarios.asmx?wsdl','wsdl');
 
@@ -47,6 +49,5 @@ if(!isset($_SESSION['cuentas'])){
 }
 
 header("location:../html/pagar.php");
-
 ?>
 

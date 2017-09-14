@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php 
+	if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <head>
   <title>GamesOdyssey</title>
   <meta charset="utf-8">
@@ -48,5 +52,4 @@
 			<!--/.nav-collapse -->
 		</div>
 		<!--/.container-fluid -->
-	</nav>
-	
+	</nav>	

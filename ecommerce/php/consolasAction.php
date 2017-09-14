@@ -28,9 +28,5 @@ if(!isset($_SESSION['consolas'])){
 	json_encode($_SESSION['consolas']);
 	
 	$con->close();
-}
-
-
-
-	
+}	
 ?>

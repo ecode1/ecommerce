@@ -1,8 +1,7 @@
 <?php 
 include 'conexion.php';
 include 'Juego.php';
-//$cat = $_POST['idCategoria'];
-//$cat;
+
 $param = $_POST['nombre'];
 
 if(!isset($_SESSION['juegos'])){
@@ -39,7 +38,5 @@ if(!isset($_SESSION['juegos'])){
 	$con->close();
 
 	
-}
-
-	
+}	
 ?>

@@ -1,5 +1,4 @@
 <?php include('../layout_menu.php'); ?>
-
     	<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="panel panel-login">
@@ -42,7 +41,4 @@
 				</div>
 			</div>
 		</div>
-				
-			
-	
 <?php include('../layout_footer.php'); ?>

@@ -2,7 +2,6 @@
 include 'conexion.php';
 include 'Juego.php';
 
-
 if(!isset($_SESSION['juegos'])){
 	$listaJuegos;
 	$listaJuegosMostrar;
@@ -54,7 +53,5 @@ if(!isset($_SESSION['juegos'])){
 	}
 
 	return $juegosMostrar;
-}
-
-	
+}	
 ?>

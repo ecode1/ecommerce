@@ -1,15 +1,13 @@
-
- <?php 
- include('../layout_menu.php'); 
- include('../php/juegosAction.php');
- include('../php/categoriasAction.php');
- include('../php/consolasAction.php');
- if(!$_SESSION['login']){
-   header("location:login.php");
-   die;
- } 
- ?>
-
+<?php  
+include('../layout_menu.php');
+include('../php/juegosAction.php');
+include('../php/categoriasAction.php');
+include('../php/consolasAction.php');
+if(!$_SESSION['login']){
+header("location:login.php");
+die;
+}
+?>
 		<div class="row">
 			<div class="col-md-2">
 				<div class="panel-group">
@@ -143,7 +141,6 @@
 					</div>
 				</div>			
 				<div class="row" id="catalogo">	
-
 				<?php  if ( isset($_SESSION['juegosMostrar'])){ 
 					foreach ($_SESSION['juegosMostrar'] as $key => $value) {
 						
@@ -169,8 +166,7 @@
 				<?php 
 					}
 				}
-				?>
-					
+				?>					
 				</div>
 				
 				<ul class="pagination centrado">
@@ -186,13 +182,9 @@
 
 									<li><a href="javascript:paginacion(<?php echo $i; ?>)"><?php echo $i; ?></a></li>
 							
-						<?php	}
-							}
-						?>			
-
-				 						  
-				
-				<?php 	
+						<?php	
+								}
+							}						 	
 						} 
 					}
 				?>
